@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="AlertCss.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="AlertJS.min.js"></script>
+    <style>
+        .test_btns{
+            width:80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        .btnTab{
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            float: left;
+        }
+        .h2{
+            color: #fff;background: #b1b1b1;line-height: 40px;margin: 0;text-indent: 0.5em;font-size: 20px;
+        }
+        .text_main{
+            background: #f3f3f3;line-height: 24px;margin-bottom: 50px;
+            padding: 10px;
+            text-indent: 2em;
+        }
+        .text_main h6{
+            background: #fff;
+            font-size: 14px;
+            margin: 5px 0;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron" style="background: #f5f5f5;">
+            <h1>Alert 插件演示</h1>
+            <a class="text-danger">当前使用的是修改版</a>
+            <div class="test_btns">
+                <button class="btn btnTab bg-success">Click Me</button>
+                <button class="btn btnTab bg-warning">Click Me</button>
+                <button class="btn btnTab bg-danger">Click Me</button>
+                <button class="btn btnTab bg-info">Click Me</button>
+                <button class="btn btnTab bg-primary">Click Me</button>
+                <button class="btn btnTab ">Click Me</button>
+            </div>
+            <div>
+                <span style="padding-right: 20px">初试版</span>
+                <a href="AlertCss.min.css" style="margin: 0 10px">AlertCss.min下载</a>
+                <a>  |  </a>
+                <a href="AlertJS.min.js" style="margin: 0 10px">AlertJS.min下载</a>
+            </div>
+            <div>
+                <span style="padding-right: 20px">修改版</span>
+                <a href="AlertCss.css" style="margin: 0 10px">AlertCss下载</a>
+                <a>  |  </a>
+                <a href="AlertJS.js" style="margin: 0 10px">AlertJS下载</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2 class="h2">用法:</h2>
+        <div class="text_main">
+            <p>1. 引入配置的css</p>
+            <h6> < script src= " js/jquery.min.js " > < /script > </h6>
+            <p>2. 引入Jquery</p>
+            <h6> < link rel= " stylesheet " href=" AlertCss.min.css " > </h6>
+            <p>3. 引入该JS</p>
+            <h6> < script src= " AlertJS.min.js "> < /script ></h6>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <h2 class="h2">HTML</h2>
+        <div class="text_main">
+            < button class="btn" > Click Me < /button >
+        </div>
+    </div>
+
+    <div class="row">
+        <h2 class="h2">JavaScript</h2>
+        <div class="text_main">
+            <p>例如:
+            <p>$('btn').click(function () {</p>
+            <p style="text-indent: 2em">new Alert( {</p>
+            <p style="text-indent: 8em">type:success</p>
+            <p style="text-indent: 8em">text:'这是一段小句子'</p>
+            <p style="text-indent: 8em">button:'点赞'</p>
+            <p style="text-indent: 8em">title:'精选句子'</p>
+            <p style="text-indent: 8em">move:0</p>
+            <p style="text-indent: 6em">} );</p>
+            <p>});</p>
+        </div>
+    </div>
+
+    <div class="row" >
+        <h2 class="h2">使用说明</h2>
+        <table class="table table-bordered" style="margin-bottom: 50px">
+            <tr>
+                <th>参数</th>
+                <th>类型</th>
+                <th>值</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>string</td>
+                <td>success | error | warn</td>
+                <td>提示的效果</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>'标题'</td>
+                <td>标题</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>string</td>
+                <td>'内容'</td>
+                <td>内容</td>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td>string</td>
+                <td>'确定'</td>
+                <td>按钮的值,只能一个的时候使用</td>
+            </tr>
+            <tr>
+                <td>background</td>
+                <td>string</td>
+                <td> 'rgba()' | '#ffa' | 'red' </td>
+                <td>弹框背景颜色</td>
+            </tr>
+            <tr>
+                <td>buttons</td>
+                <td>arr</td>
+                <td> ['点赞','踩','转发'] </td>
+                <td>按钮组< 数组有多少个 按钮就对应多少个 最多四个 ></td>
+            </tr>
+            <tr>
+                <td>input</td>
+                <td>object</td>
+                <td>{type:'text',value:'搜索','background':'red'}</td>
+                <td>input对象组</td>
+            </tr>
+            <tr>
+                <td>move</td>
+                <td>number</td>
+                <td>0 | 1 | 2 | 3</td>
+                <td>运动效果,只有4种</td>
+            </tr>
+        </table >
+    </div>
+
+    <div class="row">
+        <h2 class="h2">注意事项</h2>
+        <div class="text_main text-warning">
+            <p>该插件为初试版本,可能存在兼容性问题,与bootstrap可能存在一些小bug.</p>
+            <p>如果跟Bootstrap一起使用,请使用修改版</p>
+            <p>否则用初始版本</p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        $('.btnTab').eq(0).click(function () {
+            new Alert({
+                type:'success',
+                text:'这是一段小句子',
+                button:'点赞',
+                title:'精选句子',
+                move:0,
+            });
+        });
+        $('.btnTab').eq(1).click(function () {
+            new Alert({
+                type:'warn',
+                title:'title',
+                move:1
+            });
+        });
+        $('.btnTab').eq(2).click(function () {
+            new Alert({
+                type:'error',
+                title:'title',
+                input:{},
+                move:0
+            });
+        });
+        $('.btnTab').eq(3).click(function () {
+            new Alert({
+                title:'title',
+                buttons:['喜欢','不喜欢','转发'],
+                background:'#a5dc86',
+                move:3
+            });
+        });
+        $('.btnTab').eq(4).click(function () {
+            new Alert({
+                title:'title',
+                buttons:['喜欢','不喜欢','转发'],
+                background:'rgba(154,124,14,0.5)',
+                input:{type:'button',value:'button'},
+                move:0
+            });
+        });
+        $('.btnTab').eq(5).click(function () {
+            new Alert({
+                title:'title',
+                buttons:['喜欢','不喜欢','转发'],
+                background:'yellowgreen',
+                input:{type:'number',value:'button'},
+                color:'#fff',
+                move:2
+            });
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.alertIcon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.8    ;
+    position: relative;
+    margin: 20px auto 10px;
+    border:3px solid #a5dc86;
+}
+.alertTitle{
+    color: rgba(0,0,0,.65);
+    font-weight: 600;
+    text-transform: none;
+    position: relative;
+    display: block;
+    padding: 13px 16px;
+    font-size: 27px;
+    line-height: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+.alertText{
+    font-size: 16px;
+    position: relative;
+    float: none;
+    line-height: normal;
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 400;
+    color: rgba(0,0,0,.64);
+    max-width: calc(100% - 20px);
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+.alertBody{
+    width: 90%;
+    /*padding: 0 10%;*/
+    font-size: 12px;
+    margin: 15px auto;
+}
+.success-mask span {
+    height: 5px;
+    background-color: #a5dc86;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 2;
+}
+.success-icon{
+    animation: error-icon 0.5s;
+    border-color: #a5dc86;
+}
+.success-Span1 {
+    width: 25px;
+    left: 12px;
+    top: 46px;
+    transform: rotate(45deg);
+    animation: small 0.75s;
+}
+
+.success-Span2 {
+    width: 47px;
+    right: 4px;
+    top: 38px;
+    transform: rotate(-45deg);
+    animation: long 0.75s ;
+}
+
+.error-icon {
+    border-color:#f27474;
+    animation: error-icon 0.5s;
+}
+
+.error {
+    position: absolute;
+    height: 5px;
+    width: 47px;
+    background-color: #f27474;
+    display: block;
+    top: 37px;
+    border-radius: 2px;
+}
+.error-mask{
+    animation: error 0.5s;
+}
+.error-Span1 {
+    transform: rotate(45deg);
+    left: 13px;
+}
+
+.error-Span2 {
+    transform: rotate(-45deg);
+    right: 13px;
+}
+.warn-icon{
+    border-color:#f8bb86;
+    animation: error-icon 0.1s;
+}
+.warn-mask{
+    background: #f8bb86;
+
+}
+/*警告部分*/
+.warn{
+    background: #f8bb86;
+    animation: pulseWarning .75s infinite alternate;
+    position: relative;
+}
+/*感叹号上身*/
+.warn-Span1{
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 47px;
+    top: 10px;
+    border-radius: 2px;
+    margin-left: -2px;
+    animation: warn 0.4s;
+}
+/*感叹号下身*/
+.warn-Span2{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 7px;
+    margin-left: -3px;
+    position: absolute;
+    animation: warn-dot 0.5s;
+
+}
+/*警告感叹点动画*/
+@keyframes warn-dot {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    90%{
+
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 4px;
+        height: 4px;
+        bottom: 10px;
+    }
+}
+/*警告感叹号动画*/
+@keyframes warn {
+    0%{
+
+        opacity: 0;
+        top:-47px;
+
+    }
+    100%{
+
+        opacity: 1;
+        top: 10px;
+    }
+}
+@keyframes alertDiv-Move0 {
+    0% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+@keyframes alertDiv-Move1 {
+    0%{
+        margin: 0% auto;
+    }
+    100%{
+        margin: 10% auto;
+    }
+}
+@keyframes alertDiv-Move2 {
+     0%{
+         transform: scale(10);
+     }
+     100%{
+         transform: scale(1);
+     }
+ }
+@keyframes alertDiv-Move3 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*警告框动画*/
+@keyframes warn-icon {
+    0% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 26px;
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 26px;
+        opacity: 0;
+    }
+    80% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+        margin-top: -6px;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+/*错误框动画*/
+@keyframes error-icon {
+    0% {
+        -webkit-transform: rotateX(100deg);
+        transform: rotateX(100deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+/*错误打叉动画*/
+@keyframes error {
+    0% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 26px;
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: scale(.4);
+        transform: scale(.4);
+        margin-top: 26px;
+        opacity: 0;
+    }
+    80% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+        margin-top: -6px;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+/*打钩长的那边*/
+@keyframes long {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    65% {
+        width: 0;
+        right: 40px;
+        top: 54px;
+    }
+
+    84% {
+
+        width: 55px;
+        right: 0;
+        top: 35px;
+    }
+
+    100% {
+        width: 47px;
+        right: 4px;
+        top: 38px;
+    }
+}
+/*打钩短的那边*/
+@keyframes small {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+    100% {
+        width: 25px;
+        left: 12px;
+        top: 45px;
+    }
+}
+
+.bodyMask-Div{
+    width: 100%;
+    position:fixed;
+    left:0;
+    bottom: 0;
+    right: 0;
+    top:0;
+    background:rgba(125,125,125,0.2);
+    z-index:999998;
+}
+.alertDiv{
+    width:450px;
+    background:#fff;
+    color:#666;
+    z-index:999999;
+    padding-top:15px;
+    border-radius: 5px;
+    box-shadow:0 0 0 rgba(0,0,0,0.5);
+    vertical-align: middle;
+    margin:10% auto;
+    text-align:center;
+    animation: alertDiv-Move3 0.5s;
+}
+.footDiv{
+    text-align: center;
+    margin-top: 13px;
+    padding: 13px 16px;
+    border-radius: inherit;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.foot-btnDiv{
+    margin: 0px auto;
+}
+.foot-botton{
+    margin:0 5px;
+    background-color: #7cd1f9;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 24px;
+    display: inline-block;
+    cursor: pointer;
+}
+.body-InputDiv{
+    width: 100%;
+    margin: 0 auto;
+}
+.input-Text{
+    width: 100%;
+    border: 1px solid #7cd1f9;
+    border-radius: 10px;
+    padding: 15px 0;
+    text-indent: 2rem;
+    color: #666;
+    font-size: 14px;
+}
+.input-Btn{
+    padding: 15px;
+    background: darkred;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+}
